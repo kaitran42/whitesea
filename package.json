@@ -12,6 +12,7 @@
     "@million/lint": "^1.0.9",
     "@supabase/ssr": "^0.5.1",
     "@supabase/supabase-js": "^2.45.4",
+    "google-one-tap": "^1.0.6",
     "next": "^14.2.15",
     "react": "^18",
     "react-dom": "^18"

@@ -30,7 +30,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             alt={product.name}
             width={500}
             height={500}
-            className="w-full h-auto object-cover rounded"
+            className="w-full max-w-[500px] h-auto object-contain rounded"
           />
         </div>
         <div>
