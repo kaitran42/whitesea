@@ -1,15 +1,15 @@
 import React from "react";
-import { createClient } from "@/utils/supabase/server";
+// import { createClient } from "@/utils/supabase/server";
 
 <script src="https://accounts.google.com/gsi/client" async></script>;
 
-async function handleSignInWithGoogle(response) {
-  const supabase = createClient();
-  const { data, error } = await supabase.auth.signInWithIdToken({
-    provider: "google",
-    token: response.credential,
-  });
-}
+// async function handleSignInWithGoogle(response) {
+//   const supabase = createClient();
+//   const { data, error } = await supabase.auth.signInWithIdToken({
+//     provider: "google",
+//     token: response.credential,
+//   });
+// }
 
 export default function GoogleButton() {
   return (
