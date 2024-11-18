@@ -2,40 +2,38 @@ import { createClient } from "@/utils/supabase/server";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-interface ProductPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function ProductPage({ params }: ProductPageProps) {
+export default async function ProductPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const supabase = createClient();
-  const { data: product } = await supabase
-    .from("Products")
+  const { data: post } = await supabase
+    .from("Foods")
     .select("*")
-    .eq("id", params.id)
+    .eq("Id", params.id)
     .single();
 
-  if (!product) {
+  if (!post) {
     notFound();
   }
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
+      <h1 className="text-2xl font-bold mb-4">{post.Title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <Image
-            src={product.image_url}
-            alt={product.name}
+            src={post.PhotoLink}
+            alt={post.Title}
             width={500}
             height={500}
             className="w-full max-w-[500px] h-auto object-contain rounded"
           />
         </div>
         <div>
-          <p className="text-lg mb-2">Rating: {product.rating.toFixed(1)}</p>
-          <p className="text-gray-700">{product.description}</p>
+          <p className="text-lg mb-2">Likes: {post.NumLikes}</p>
+          <p className="text-gray-700">{post.description}</p>
           {/* Add more product details here */}
         </div>
       </div>

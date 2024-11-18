@@ -14,6 +14,18 @@ const nextConfig = {
         port: "",
         pathname: "/content/dam/trjo/products/**",
       },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        port: "",
+        pathname: "/vi/**/maxresdefault.jpg",
+      },
+      {
+        protocol: "https",
+        hostname: "www.seriouseats.com",
+        port: "",
+        pathname: "/thmb/**",
+      },
     ],
   },
 };
