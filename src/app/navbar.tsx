@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const Navbar = () => {
   return (
     <>
-      <div className="w-full h-20 sticky top-0 border-black border-b-2 bg-white">
+      <div className="w-full h-20 sticky top-0 border-black border-b-2 bg-white z-50">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <ul className="hidden md:flex items-center gap-x-10">
@@ -15,11 +15,11 @@ const Navbar = () => {
                   <p>Whitesea</p>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/profile">
                   <p>Taste Profile</p>
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <div className="ml-auto">
               <Button variant="outline">

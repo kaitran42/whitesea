@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "./components/navigation/navbar";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import Navigation from "./navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Snacktalk",
