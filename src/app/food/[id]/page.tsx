@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getFood } from "@/utils/services/api";
+import Link from "next/link";
 
 type PageProps = {
   params: { id: string };
@@ -24,6 +25,14 @@ export default async function ProductPage({ params }: PageProps) {
         <div>
           <p className="text-lg mb-2">Likes: {post.NumLikes}</p>
           <p className="text-gray-700">{post.Description}</p>
+          <Link
+            href={post.ExternalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            {post.ExternalLink}
+          </Link>
         </div>
       </div>
     </article>

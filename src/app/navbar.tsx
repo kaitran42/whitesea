@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="w-full h-20 sticky top-0 border-black border-b-2 bg-white z-50">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
-            <ul className="hidden md:flex items-center gap-x-10">
+            <ul className="flex items-center gap-x-10">
               <li>
                 <Link href="/">
                   <p>Whitesea</p>

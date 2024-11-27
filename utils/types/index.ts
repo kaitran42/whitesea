@@ -3,7 +3,7 @@ export interface Food {
   Title: string;
   PhotoLink: string;
   Description: string;
-  RecipeLink: string;
+  ExternalLink: string;
   NumLikes: number;
 }
 
